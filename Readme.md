@@ -1,6 +1,21 @@
-# Dépot Public pour le CNAM 2024
+# Site Lenofo
 
-Cours UTC502
+- [Explication du déroulement du projet](/documentation/EXPLICATION.md)
+- [Installation de Rocky Linux](/documentation/Rocky/Rocky.md)
+- [Documentation d'installation du script](/documentation/utilisateur/documentation.md)
 
-Responsable: Jérôme Avond <contact@ajformation.fr>
+### Commandes d'installation
+
+**Commande complète du script :**
+`wget -qO- https://raw.githubusercontent.com/Rxdy/Site/refs/heads/main/script.sh | bash`
+
+**Commande raccourcie du script :**
+`wget -qO- https://bit.ly/lenofo | bash`
+
+
+
+
+
+
+
 
