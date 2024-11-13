@@ -1,15 +1,15 @@
 # Documentation utilisateurs
 
-#### *Remarques prélimilaires: Les clichés accompagnant les explications sont faits à partir de VirtualBox version 7.1.4. Les points importants des clichés seront encadrés en rouge.* 
+#### _Remarques préliminaires: Les clichés accompagnant les explications sont faits à partir de VirtualBox version 7.1.4. Les points importants des clichés seront encadrés en rouge._
 
-- VM = virutal machine / machine virtuelle
+- VM = Virtual Machine / Machine Virtuelle
 - AdresseIP = Adresse IP du la machine virtuelle
-  
+
 ---
 
 ## Introduction
 
-Dans cette documentation vous retrouverez dans cette ordre : `Pré-requis serveur virtuel`, `Préparation de l'environnement`,`Pré-requis serveur physique`, `Connection au serveur web`, `Héberger le site web`. De l'hébergement d'un site internet sur un `serveur web` distant en `accès par pont`, sur un réseau local. 
+Dans cette documentation vous retrouverez dans cet ordre : `Pré-requis serveur virtuel`, `Préparation de l'environnement`,`Pré-requis serveur physique`, `Connexion au serveur web`, `Héberger le site web`. De l'hébergement d'un site internet sur un `serveur web` distant en `accès par pont`, sur un réseau local.
 
 ---
 
@@ -20,11 +20,11 @@ Afin de poursuivre la manipulation vous aurez besoin de :
 - 'Ordinateur physique', à partir duquel nous pourrons nous connecter en ssh à la VM
 - 'réseau local'
 - `logiciel de virtualisation, ici VirtualBox`
-- `Serveur virtuel`, c'est à dire une machine virtuelle installé sur virtualbox avec serveur ssh [^7]
-- `Réseau par pont`, 
-- 'compte utilisateur sur serveur'                  nom_compte_utilisateur_serveur
-- 'le mot de passe utilisateur de votre serveur'    mot_de_passe_utilisateur_serveur
-- 'le mot de passe du compte "root"'                mot_de_passe_root_serveur
+- `Serveur virtuel`, c'est-à-dire une machine virtuelle installée sur VirtualBox avec serveur ssh [^7]
+- `Réseau par pont`,
+- 'compte utilisateur sur serveur' nom_compte_utilisateur_serveur
+- 'le mot de passe utilisateur de votre serveur' mot_de_passe_utilisateur_serveur
+- 'le mot de passe du compte "root"' mot_de_passe_root_serveur
 
 ---
 
@@ -34,23 +34,23 @@ Il existe deux solutions pour héberger son site sur un `serveur distant`. Il pe
 
 ### Installation de VirtualBox
 
-Pour l'option d'un serveur virtuel, vous aurez besoin d'installer VirtualBox. Rendez vous sur le lien de téléchargement : https://www.virtualbox.org/wiki/Downloads
+Pour l'option d'un serveur virtuel, vous aurez besoin d'installer VirtualBox. Rendez-vous sur le lien de téléchargement : https://www.virtualbox.org/wiki/Downloads
 
-### Création d'une machine virtuel
+### Création d'une machine virtuelle
 
 Après avoir installé VirtualBox, nous allons créer une machine vous avez le choix entre une machine avec la distribution `debian 12` ou `rocky 9`.
 
-Voici ou vous pouvez retrouver les ISO des distributions respective :
+Voici où vous pouvez retrouver les ISO des distributions respectives :
 
-- `Debian 12 :` https://www.debian.org/distrib/ 
+- `Debian 12 :` https://www.debian.org/distrib/
 - `Rocky 9 :` https://rockylinux.org/fr/download
 
-Si vous prenez le choix de la distribution rocky nous avons une documentation pour l'installation : https://github.com/CNAM2024/Devoirs/tree/main/EXO1_Doc_Rocky/LAGOUARDAT.Hugo
-Pour debian, voici un lien pour un tutoriel sur youtube : https://www.youtube.com/watch?v=2JIBxi7tywY
+Si vous prenez le choix de la distribution Rocky nous avons une documentation pour l'installation : https://github.com/CNAM2024/Devoirs/tree/main/EXO1_Doc_Rocky/LAGOUARDAT.Hugo
+Pour Bebian, voici un lien pour un tutoriel sur Youtube : https://www.youtube.com/watch?v=2JIBxi7tywY
 
 ### Paramétrage réseau en accès par pont
 
-ATTENTION a bien configuré le réseau de la machine virtuel. `Cliquer droit sur la machine virtuel` -> `Configuration` -> `Réseau`.
+ATTENTION à bien configurer le réseau de la machine virtuel. `Cliquer droit sur la machine virtuel` -> `Configuration` -> `Réseau`.
 
 ![alt text](./images/2024-11-02-15-08-05.png)
 
@@ -58,7 +58,7 @@ Changer le mode d'accès réseau par : `Accès par pont`[^1].
 
 ---
 
-## Pré-requis serveur physique
+## Prérequis serveur physique
 
 Afin de poursuivre la manipulation vous aurez besoin de :
 
@@ -67,24 +67,24 @@ Afin de poursuivre la manipulation vous aurez besoin de :
 
 ---
 
-## Connection au serveur web
+## Connexion au serveur web
 
 ### Adresse IP
 
-Maintenant que l'environnement est prêt, il suffit de connaître l'adresse IP de notre machine physique ou virtuel qui servira de serveur.
-Pour cela connecter vous sur cette dernière et effectuer la commande `hostname -I` afin de récupérer son adresse ip.
-Remplacer olivier par votre nom d'utilisateur sur le serveur web
-Entrer votre mot de passe pour votre compte d'utilisateur sur le serveur web 
+Maintenant que l'environnement est prêt, il suffit de connaître l'adresse IP de notre machine physique ou virtuelle qui servira de serveur.
+Pour cela, connectez-vous sur cette dernière et effectuez la commande `hostname -I` afin de récupérer son adresse IP.
+Remplacez olivier par votre nom d'utilisateur sur le serveur web.
+Entrez votre mot de passe pour votre compte d'utilisateur sur le serveur web.
 
 ![alt text](./images/2024-11-02-15-59-55.png)
 
-Vous pourrez noter votre adresse IP (AdresseIP)de votre VM serveur web et non pas l'adresse 192.160.0.105 qui est celle de notre exemple.
+Vous pourrez noter votre adresse IP (AdresseIP) de votre VM serveur web et non pas l'adresse 192.160.0.105, qui est celle de notre exemple.
 
-### Connection SSH (Secure SHell) [^3]
+### Connexion SSH (Secure SHell) [^3]
 
-Nous allons maintenant nous connecter en SSH à notre serveur distant depuis notre machine physique. 
-Ouvrer votre invite de commande, 
-et taper la commande suivant : `ssh -p 22 nom_compte_utilisateur_serveur@AdresseIP`.
+Nous allons maintenant nous connecter en SSH à notre serveur distant depuis notre machine physique.
+Ouvrez votre invite de commande,
+et tapez la commande suivant : `ssh -p 22 nom_compte_utilisateur_serveur@AdresseIP`.
 
 ![alt text](./images/2024-11-02-16-08-36.png)
 
@@ -94,17 +94,17 @@ Dans notre exemple:
 
 Pour continuer, tapez yes et appuyez sur Entrée.[^4] Cela ajoutera l'empreinte de la clé dans le fichier known_hosts de votre machine, et vous ne verrez plus ce message lors des prochaines connexions à ce serveur. Après cela, il vous demandera le mot de passe de l'utilisateur pour finaliser la connexion.
 Saisissez le mot de passe de votre compte utilisateur sur le serveur.
-(Attention, votre machine sur laquel vous voulez vous connecter doit être allumé)
+(Attention, votre machine sur laquelle vous voulez vous connecter doit être allumée)
 
 ![alt text](./images/2024-11-02-16-17-19.png)
 
 Bravo, vous avez maintenant accès à votre serveur depuis votre machine en tant qu'utilisateur.
 
-### Connection en administrateur
+### Connexion en administrateur
 
-Il faut désormais que vous vous connectiez en administrateur root.[^6] 
-Pour cela effectuer la commande : `su -`[^5] . 
-Saisisser cette fois le mot de passe adminstrateur.
+Il faut désormais que vous vous connectiez en administrateur root.[^6]
+Pour cela effectuez la commande : `su -`[^5] .
+Saisissez cette fois le mot de passe adminstrateur.
 
 ![alt text](./images/2024-11-02-16-24-58.png)
 
@@ -118,7 +118,7 @@ Bravo, vous êtes connecté en tant qu'administrateur root depuis votre machine 
 
 Pour l'installation du site sur le serveur vous aurez besoin de seulement une commande que vous pouvez copier/coller dans votre invite de commande.
 
-Commande : `wget -qO- https://bit.ly/lenofo | bash` 
+Commande : `wget -qO- https://bit.ly/lenofo | bash`
 
 ![alt text](./images/2024-11-02-16-36-07.png)
 
@@ -128,13 +128,13 @@ Valider... l'installation est lancée...
 
 ![alt text](./images/2024-11-02-16-36-58.png)
 
-Sur la capture d'écran suivante nous voyons bien la copie (par extraction du fichier lenofo.zip) de tous les éléments du site dans le dossier du serveur, c'est à dire dans /var/www/html/
+Sur la capture d'écran suivante nous voyons bien la copie (par extraction du fichier lenofo.zip) de tous les éléments du site dans le dossier du serveur, c'est-à-dire dans /var/www/html/
 
 ![alt text](./images/2024-11-02-16-37-39.png)
 
-## Vérifier la bonne installation et le bon fonctionnalité du site web "lenofo" sur notre serveur.
+## Vérifier la bonne installation et le bon fonctionnement du site web "Lenofo" sur notre serveur.
 
-Pour tout navigateur (présent sur un pc,mac ou vm se trouvant sur le réseau de l'adresse AdresseIP) vous pourrez tester l'adresse, la navigation sur le site "LENOFO".[^8]
+Pour tout navigateur (présent sur un PC, Mac ou VM se trouvant sur le réseau de l'adresse AdresseIP) vous pourrez tester l'adresse, la navigation sur le site "LENOFO".[^8]
 
 ![alt text](./images/2024-11-02-17-09-45.png)
 
@@ -158,7 +158,7 @@ Pour tout navigateur (présent sur un pc,mac ou vm se trouvant sur le réseau de
 
 [^5] `su -` charge l'environnement complet de l'utilisateur cible (comme si on ouvrait une nouvelle session), tandis que `su` garde l'environnement actuel, ce qui peut causer des problèmes de chemin ou de permissions.
 
-[^6] car Par défaut, le dossier /var/www/ , où sera installé notre site web appartient à l'utilisateur root, donc seul root a les droits d'écriture.
+[^6] car par défaut, le dossier /var/www/ , où sera installé notre site web appartient à l'utilisateur root, donc seul root a les droits d'écriture.
 
 [^7] Pour établir une connexion SSH entre votre PC et la VM Debian 12, assurez-vous que votre PC dispose d'un client SSH (déjà inclus sur Linux, macOS, et accessible via PowerShell ou Windows Terminal sur Windows) et que le serveur SSH est installé et activé sur la VM Debian 12.
 
