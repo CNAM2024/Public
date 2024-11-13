@@ -1,11 +1,23 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="login.js"></script>
+</head>
+<body>
 <div>
 
     <label>Identifiant</label>
-    <input type="text">
-
+    <input type="text" id="identifiant">
     
     <label>Password</label>
-    <input type="password">
+    <input type="password" id="password">
 
+    <button id="connexion" onclick="logon($('#identifiant').val(),$('#password').val())">Connexion</button>
+
+    <p id="message"></p>
 
 </div>
+
+</body>
+
+</html>
