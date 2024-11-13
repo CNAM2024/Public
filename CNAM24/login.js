@@ -1,7 +1,8 @@
 var utilisateurs = [
     {
         id: "Rudy",
-        password: "mdp1"
+        password: "mdp1",
+        connexion:"false"
     },
     {
         id: "Alexis",
@@ -53,6 +54,8 @@ var utilisateurs = [
     }
 ]
 
+var log = []
+
 
 function logon(id, mdp){
     console.log(id, mdp)
@@ -63,12 +66,15 @@ function logon(id, mdp){
     for (let i = 0; i < utilisateurs.length; i++) {
         console.log(utilisateurs[i].id, utilisateurs[i].password)
         if(utilisateurs[i].id == id && utilisateurs[i].password == mdp){
-            location.replace("http://autonomie.cfai24.ajformation.fr/CNAM24/blog.html");
+            location.href="/CNAM/Public/CNAM24/accueil.html";
+            utilisateurs[i].connexion = true
             return true
         }else{
             $('#message').text("Erreur, identifiant ou mot de passe n'est pas bon.")
         }
     }
+}
 
+function connexion(){
 
 }
