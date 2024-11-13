@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 1.6;
+}
+
+header {
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #2a4b7c;
+}
+
+header .devise {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+.logo-section {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo {
+    max-width: 500px;
+    height: auto;
+}
+
+.search-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.search-bar {
+    padding: 10px;
+    font-size: 1rem;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.lang-button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #2a4b7c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.lang-button:hover {
+    background-color: #1f3a60;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+}
+
+main h2 {
+    color: #2a4b7c;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+main h3 {
+    color: #333;
+    font-size: 1.4rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+main p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.biographies {
+    margin-top: 30px;
+}
+
+.biographies h2 {
+    font-size: 1.5rem;
+    color: #2a4b7c;
+    margin-bottom: 10px;
+}
+
+.biographies ul {
+    list-style: none;
+    padding: 0;
+}
+
+.biographies li {
+    margin: 5px 0;
+}
+
+.biographies a {
+    text-decoration: none;
+    color: #2a4b7c;
+    font-weight: bold;
+}
+
+.biographies a:hover {
+    text-decoration: underline;
+}
+
+/* Section de commentaires en bas de page */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    width: 100%;
+    background-color: #fff;
+    text-align: left;
+    border-top: 3px solid #ffd700; /* Bande jaune en haut de la section */
+}
+
+footer h2 {
+    font-size: 1.5rem;
+    color: #ffd700; /* Jaune pour le titre des commentaires */
+    margin-bottom: 15px;
+}
+
+footer .comment-section {
+    font-size: 1rem;
+    color: #333; /* Texte en noir pour contraste */
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer .comment-section p {
+    color: #666;
+}
+
+footer {
+    width: 100%;
+    background-color: #2a4b7c;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    margin: 20px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-links h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #ffd700;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ddd;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: #ffd700;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
