@@ -199,3 +199,11 @@ Résultat :
     `more /var/log/apache2/error.log`
 
 - Le forum est maintenant accessible à cette adresse http://autonomie.cfai24.ajformation.fr/mylittleforum/
+
+## Ajout des autres pages
+
+`git clone https://github.com/CNAM2024/Public.git`
+
+`cp -r ~/Public/CNAM24/ /mnt/sdb2/www/`
+
+- L'ensemble du site est désormais disponible ici: http://autonomie.cfai24.ajformation.fr/CNAM24/
