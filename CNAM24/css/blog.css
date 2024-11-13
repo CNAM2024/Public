@@ -77,31 +77,3 @@ footer {
     from {opacity: 0;}
     to {opacity: 1;}
 }
-
-nav.crumbs {
-    background-color: #333;
-    padding: 1rem;
-    text-align: center;
-}
-
-nav.crumbs ol {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav.crumbs li.crumb {
-    margin: 0 1rem;
-}
-
-nav.crumbs li.crumb a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-nav.crumbs li.crumb a:hover {
-    text-decoration: underline;
-}

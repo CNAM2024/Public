@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <link rel="stylesheet" href="blog.css">
-    <script type="text/javascript" src="login.js"></script>
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <script type="text/javascript" src="../js/login.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-    <script>
-        connexion();
-    </script>
     
 <header>
     <nav class="crumbs">
         <ol>
-            <li class="crumb"><a href="../CNAM24/accueil.html">Accueil</a></li>
-            <li class="crumb"><a href="../CNAM24/forum.html">Forum</a></li>
-            <li class="crumb"><a href="../CNAM24/wiki.html">Wiki</a></li>
-            <li class="crumb"><a href="../CNAM24/blog.html">Blog</a></li>
+            <li class="crumb"><a href="./accueil.html">Accueil</a></li>
+            <li class="crumb"><a href="./forum.html">Forum</a></li>
+            <li class="crumb"><a href="./wiki.html">Wiki</a></li>
+            <li class="crumb"><a href="./blog.html">Blog</a></li>
+            <li class="crumb" onclick="deconnexion()"><a href="../index.html">Deconnexion</a></li>
         </ol>
     </nav>
     <h1>Notre Blog</h1>
@@ -43,7 +43,7 @@
         <p id="modalContenue"></p>
     </div>
 </div>
-<script src="blog.js"></script>
+<script src="../js/blog.js"></script>
 </div>
 </body>
 </html>

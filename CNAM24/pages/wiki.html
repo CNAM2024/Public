@@ -4,10 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WIKICNAM2024</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/login.js"></script>
+
 </head>
 <body>
     <header>
+        <nav class="crumbs">
+            <ol>
+                <li class="crumb"><a href="./accueil.html">Accueil</a></li>
+                <li class="crumb"><a href="./forum.html">Forum</a></li>
+                <li class="crumb"><a href="./wiki.html">Wiki</a></li>
+                <li class="crumb"><a href="./blog.html">Blog</a></li>
+                <li class="crumb" onclick="deconnexion()"><a href="../index.html">Deconnexion</a></li>
+            </ol>
+        </nav>
         <h1>WIKICNAM2024</h1>
         <p class="devise">Nous connaissons pleins de choses !</p>
     </header>
