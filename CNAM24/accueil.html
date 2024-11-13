@@ -3,27 +3,33 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="login.js"></script>
     <style>
-        nav {
-  border-bottom: 1px solid black;
-}
+      nav.crumbs {
+            background-color: #333;
+            padding: 1rem;
+            text-align: center;
+        }
 
-.crumbs ol {
-  list-style-type: none;
-  padding-left: 0;
-}
+        nav.crumbs ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
 
-.crumb {
-  display: inline-block;
-}
+        nav.crumbs li.crumb {
+            margin: 0 1rem;
+        }
 
-.crumb a::after {
-  display: inline-block;
-  color: #000;
-  content: '>';
-  font-size: 80%;
-  font-weight: bold;
-  padding: 0 3px;
-}
+        nav.crumbs li.crumb a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        nav.crumbs li.crumb a:hover {
+            text-decoration: underline;
+        }
 
     </style>
 </head>
@@ -35,6 +41,7 @@
             <li class="crumb"><a href="../CNAM24/forum.html">Forum</a></li>
             <li class="crumb"><a href="../CNAM24/wiki.html">Wiki</a></li>
             <li class="crumb"><a href="../CNAM24/blog.html">Blog</a></li>
+            <li class="crumb" onclick="deconnexion()"><a href="../CNAM24/index.html">Blog</a></li>
         </ol>
       </nav>
 

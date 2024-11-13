@@ -54,7 +54,6 @@ var utilisateurs = [
     }
 ]
 
-var log = []
 
 
 function logon(id, mdp){
@@ -75,6 +74,3 @@ function logon(id, mdp){
     }
 }
 
-function connexion(){
-
-}
